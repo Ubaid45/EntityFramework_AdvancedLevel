@@ -1,9 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Data.Entity;
-using System.Linq;
 
-namespace DatabaseFirst
+namespace CodeFirst
 {
     class Program
     {
@@ -54,18 +52,12 @@ namespace DatabaseFirst
 
 
 
-    static void Main()
+        static void Main()
         {
-            var dbContext = new PlutoDbContext();
-            var courses = dbContext.GetCourses().ToList();
-            foreach (var course in courses)
-            {
-                Console.WriteLine(course.Title);
-            }
 
             while (true)
             {
-                
+
             }
         }
     }

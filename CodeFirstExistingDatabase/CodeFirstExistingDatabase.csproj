@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{64C95DAF-57A3-4DD4-9F64-7B59E5C1C16F}</ProjectGuid>
+    <ProjectGuid>{B1C4CE5A-C71D-4DAB-8E4C-DBED6AF14396}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>DatabaseFirst</RootNamespace>
-    <AssemblyName>DatabaseFirst</AssemblyName>
+    <RootNamespace>CodeFirstExistingDatabase</RootNamespace>
+    <AssemblyName>CodeFirstExistingDatabase</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -34,10 +34,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -52,70 +52,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Author.cs">
-      <DependentUpon>PlutoModel.tt</DependentUpon>
+    <Compile Include="Author.cs" />
+    <Compile Include="Category.cs" />
+    <Compile Include="Course.cs" />
+    <Compile Include="Migrations\202004041807423_InitialModel.cs" />
+    <Compile Include="Migrations\202004041807423_InitialModel.Designer.cs">
+      <DependentUpon>202004041807423_InitialModel.cs</DependentUpon>
     </Compile>
-    <Compile Include="Course.cs">
-      <DependentUpon>PlutoModel.tt</DependentUpon>
+    <Compile Include="Migrations\202004041812051_AddCategoriesTable.cs" />
+    <Compile Include="Migrations\202004041812051_AddCategoriesTable.Designer.cs">
+      <DependentUpon>202004041812051_AddCategoriesTable.cs</DependentUpon>
     </Compile>
-    <Compile Include="CourseSection.cs">
-      <DependentUpon>PlutoModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="GetAuthorCoursesResult.cs">
-      <DependentUpon>PlutoModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="PlutoModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>PlutoModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="PlutoModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>PlutoModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="PlutoModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>PlutoModel.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="Post.cs">
-      <DependentUpon>PlutoModel.tt</DependentUpon>
-    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="PlutoContext.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tag.cs">
-      <DependentUpon>PlutoModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="tblUser.cs">
-      <DependentUpon>PlutoModel.tt</DependentUpon>
-    </Compile>
+    <Compile Include="Tag.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <EntityDeploy Include="PlutoModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>PlutoModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
     <None Include="packages.config" />
-    <None Include="PlutoModel.edmx.diagram">
-      <DependentUpon>PlutoModel.edmx</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="PlutoModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>PlutoModel.edmx</DependentUpon>
-      <LastGenOutput>PlutoModel.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="PlutoModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>PlutoModel.edmx</DependentUpon>
-      <LastGenOutput>PlutoModel.cs</LastGenOutput>
-    </Content>
+    <EmbeddedResource Include="Migrations\202004041807423_InitialModel.resx">
+      <DependentUpon>202004041807423_InitialModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004041812051_AddCategoriesTable.resx">
+      <DependentUpon>202004041812051_AddCategoriesTable.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

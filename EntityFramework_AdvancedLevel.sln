@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.29926.136
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseFirst", "DatabaseFirst\DatabaseFirst.csproj", "{64C95DAF-57A3-4DD4-9F64-7B59E5C1C16F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeFirst", "CodeFirst\CodeFirst.csproj", "{8FE60CF0-C3FA-4F7C-947D-3DDA94D0FB28}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeFirstExistingDatabase", "CodeFirstExistingDatabase\CodeFirstExistingDatabase.csproj", "{B1C4CE5A-C71D-4DAB-8E4C-DBED6AF14396}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{64C95DAF-57A3-4DD4-9F64-7B59E5C1C16F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{64C95DAF-57A3-4DD4-9F64-7B59E5C1C16F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{64C95DAF-57A3-4DD4-9F64-7B59E5C1C16F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8FE60CF0-C3FA-4F7C-947D-3DDA94D0FB28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FE60CF0-C3FA-4F7C-947D-3DDA94D0FB28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FE60CF0-C3FA-4F7C-947D-3DDA94D0FB28}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FE60CF0-C3FA-4F7C-947D-3DDA94D0FB28}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1C4CE5A-C71D-4DAB-8E4C-DBED6AF14396}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1C4CE5A-C71D-4DAB-8E4C-DBED6AF14396}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1C4CE5A-C71D-4DAB-8E4C-DBED6AF14396}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1C4CE5A-C71D-4DAB-8E4C-DBED6AF14396}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
